@@ -77,7 +77,6 @@ const renderCountryItem = (countries) => {
     countryItem = document.createElement("li");
     const anchorElement = document.createElement("a");
     anchorElement.href = `?country=${country.cca3}`;
-    // anchorElement.href = `?country=${country.code}`;
     listElement.appendChild(countryItem);
     countryItem.classList.add("country");
     countryItem.appendChild(anchorElement);
