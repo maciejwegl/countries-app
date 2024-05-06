@@ -1,0 +1,154 @@
+:root {
+  /* Light mode styles */
+
+  --color-background: #393e46;
+  --color-elements: #5c636e;
+  --color-bg-header: #5c636e;
+  --color-text: #f7f7f7;
+  --color-inputs: #77808f;
+  --color-background-hover: #808594;
+  --color-bg-btn: rgba(36, 36, 36, 0.667);
+
+  /* Borders element styles */
+  --color-bg-borders-container: #808594;
+  --color-bg-borders-container-hover: #999eaf;
+  --color-bg-borders-item: #f7f7f7;
+  --color-bg-borders-item-hover: #999eaf;
+  --color-text-borders-item: #323643;
+
+  /* Dark mode styles */
+
+  --color-dm-background: #fafafa;
+  --color-dm-elements: #e3e3e3;
+  --color-dm-bg-header: #e3e3e3;
+  --color-dm-text: #323643;
+  --color-dm-inputs: #f7f7f7;
+
+  /* Typograpy */
+
+  --fs-primary: 17px;
+  --fs-app-title: 32px;
+  --fs-country-name: 22px;
+  --fs-country-name-details: 25px;
+  --fs-info-details: 20px;
+  --fs-borders-heading: 20px;
+
+  /* Box shadow */
+
+  --box-shadow-elements: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.dark-mode {
+  --color-background: #fafafa;
+  --color-elements: #e3e3e3;
+  --color-bg-header: #e3e3e3;
+  --color-text: #323643;
+  --color-inputs: #f7f7f7;
+  --color-background-hover: #c6cde3;
+  --color-bg-btn: #fdfdff;
+}
+
+#main-header {
+  width: 100%;
+  position: relative;
+  height: 28vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main-header.hidden {
+  display: none;
+}
+
+#main-header nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--color-bg-header);
+  width: 100%;
+  min-height: 20vh;
+  padding: 20px;
+}
+
+.btn {
+  /* background-color: var(--color-inputs); */
+  width: 200px;
+  background-color: var(--color-bg-btn);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: var(--fs-primary);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: var(--box-shadow-elements);
+  margin: 0px 30px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn i {
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: var(--color-bg-borders-item-hover);
+  transform: scale(0.9);
+}
+
+#main-header nav h1 {
+  padding-bottom: 35px;
+  font-size: var(--fs-app-title);
+  width: 100%;
+  text-align: center;
+}
+
+#countries {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
+}
+
+@media (max-width: 1024px) {
+  #countries {
+    padding: 30px 0px;
+  }
+
+  #main-header nav h1 {
+    padding: 35px;
+    text-align: left;
+  }
+
+  .btn {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  #countries {
+    padding: 0px;
+  }
+
+  #main-header nav h1 {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,26 @@
+:root {
+  /* Light mode styles */
+
+  --color-background: #323643;
+  --color-elements: #606470;
+  --color-bg-header: #606470;
+  --color-text: #f7f7f7;
+  --color-inputs: hsl(0, 0%, 52%);
+
+  /* Dark mode styles */
+
+  --color-dm-background: #fafafa;
+  --color-dm-elements: #e3e3e3;
+  --color-dm-bg-header: #e3e3e3;
+  --color-dm-text: #323643;
+  --color-dm-inputs: #f7f7f7;
+
+  /* Typograpy */
+
+  --fs-primary: 18px;
+  --fs-app-title: 32px;
+  --fs-country-name: 22px;
+  --fs-country-name-details: 25px;
+  --fs-info-details: 20px;
+  --fs-borders-heading: 25px;
+}

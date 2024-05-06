@@ -1,0 +1,68 @@
+/* Filters styles */
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.filters.hidden {
+  display: none;
+}
+
+.filters input {
+  width: 250px;
+  font-size: var(--fs-primary);
+  padding: 10px 20px;
+  border: none;
+  color: var(--color-text);
+  background-color: var(--color-inputs);
+  border-radius: 6px;
+}
+.filters input::placeholder {
+  color: var(--color-text);
+}
+
+.filters select {
+  width: 250px;
+  font-size: var(--fs-primary);
+  background-color: var(--color-inputs);
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: var(--color-text);
+  border: none;
+}
+
+/* @media (max-width: 1024px) {
+  
+} */
+
+@media (max-width: 768px) {
+  .filters {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .filters select,
+  .filters input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+  .filters {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .filters input,
+  .filters label,
+  .filters select {
+    width: 100%;
+  }
+
+  .filters input {
+    padding: 12px 20px;
+  }
+}
